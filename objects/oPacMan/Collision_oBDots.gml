@@ -1,4 +1,4 @@
-score += 10;
+score += 100;
 with (other) {
 	instance_destroy();
 }

@@ -1,10 +1,10 @@
 {
   "$GMSprite":"",
-  "%Name":"wall",
+  "%Name":"ghost",
   "bboxMode":0,
-  "bbox_bottom":7,
+  "bbox_bottom":0,
   "bbox_left":0,
-  "bbox_right":7,
+  "bbox_right":0,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,32 +16,13 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":8,
+  "height":1,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"36600bb1-79af-4e0b-8e76-64946d4d28bf","blendMode":0,"displayName":"default","isLocked":false,"name":"36600bb1-79af-4e0b-8e76-64946d4d28bf","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"wall",
-  "nineSlice":{
-    "$GMNineSliceData":"",
-    "bottom":0,
-    "enabled":false,
-    "guideColour":[4294902015,4294902015,4294902015,4294902015,],
-    "highlightColour":1728023040,
-    "highlightStyle":0,
-    "left":0,
-    "resourceType":"GMNineSliceData",
-    "resourceVersion":"2.0",
-    "right":0,
-    "tileMode":[
-      0,
-      0,
-      0,
-      0,
-      0,
-    ],
-    "top":0,
-  },
+  "name":"ghost",
+  "nineSlice":null,
   "origin":0,
   "parent":{
     "name":"Sprites",
@@ -52,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"wall",
+    "%Name":"ghost",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -76,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"wall",
+    "name":"ghost",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -88,7 +69,7 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4e21219c-9dcf-4bf7-a9c1-1e2cbef4976d","path":"sprites/wall/wall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4e21219c-9dcf-4bf7-a9c1-1e2cbef4976d","path":"sprites/ghost/ghost.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"0c42bfb5-51d9-4b12-b530-9ffcb0631454","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
@@ -105,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":8,
+  "width":1,
 }

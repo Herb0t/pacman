@@ -1,39 +1,21 @@
-// Define the grid size (e.g., 32x32)
-var grid_size = 2;
+// Define the grid size
+var grid_size = 8;
 
-// Snap the player's position to the grid to avoid offsets
-x = floor(x / grid_size) * grid_size;
-y = floor(y / grid_size) * grid_size;
+// Get Pac-Man's current grid cell
+var grid_x = floor(x / grid_size);
+var grid_y = floor(y / grid_size);
 
-// Set movement variables
-var move_x = 0;
-var move_y = 0;
+// Calculate the target cell to the right
+var target_grid_x = grid_x + 1;
+var target_grid_y = grid_y;
 
-// Handle keyboard inputs
-if (keyboard_check_pressed(vk_right)) {
-    move_x = grid_size;
+// Check if the target cell is free
+if (!mp_grid_get_cell(global.grid, target_grid_x, target_grid_y)) {
+    // Move Pac-Man to the target position in the grid
+    x = target_grid_x * grid_size;
+    y = target_grid_y * grid_size;
+	show_debug_message("move too x : " + string(x) + " y : " + string(y));
+    
+	// Update sprite and direction if necessary
     sprite_index = pac_right;
-    direction = 0;
-} else if (keyboard_check_pressed(vk_left)) {
-    move_x = -grid_size;
-    sprite_index = pac_left;
-    direction = 180;
-} else if (keyboard_check_pressed(vk_up)) {
-    move_y = -grid_size;
-    sprite_index = pac_up;
-    direction = 90;
-} else if (keyboard_check_pressed(vk_down)) {
-    move_y = grid_size;
-    sprite_index = pac_down;
-    direction = 270;
-}
-
-// Check if the next position is valid
-var new_x = x + move_x;
-var new_y = y + move_y;
-
-if (!place_meeting(new_x, new_y, oWalls)) {
-    // Move to the new grid position
-    x = new_x;
-    y = new_y;
 }
